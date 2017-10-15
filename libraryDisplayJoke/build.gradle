@@ -1,16 +1,19 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.udacity.gradle.builditbigger"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
@@ -26,11 +29,10 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     compile "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
-    compile 'com.google.android.gms:play-services-ads:11.0.4'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
     compile 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
-    compile project(':jokeLibrary')
-    compile project(':libraryDisplayJoke')
+    testCompile 'junit:junit:4.12'
 }

@@ -26,6 +26,7 @@ public class BackendAsyncTask extends AsyncTask<String, Void, String> {
     public BackendAsyncTask(Context context){
         mContext = context;
     }
+
     @Override
     protected String doInBackground(String... strings) {
         if(myApiService == null){

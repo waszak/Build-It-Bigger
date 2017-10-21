@@ -1,3 +1,9 @@
+apply plugin: 'java'                              // standard Java tasks
+apply plugin: 'war'                               // standard Web Archive plugin
+
+apply plugin: 'com.google.cloud.tools.appengine'  // App Engine tasks
+apply plugin: 'com.google.cloud.tools.endpoints-framework-server'
+
 // If you would like more information on the gradle-appengine-plugin please refer to the github page
 // https://github.com/GoogleCloudPlatform/gradle-appengine-plugin
 
@@ -17,11 +23,6 @@ repositories {   // repositories for Jar's you access in your code
     mavenCentral()
     jcenter()
 }
-apply plugin: 'java'                              // standard Java tasks
-apply plugin: 'war'                               // standard Web Archive plugin
-
-apply plugin: 'com.google.cloud.tools.appengine'  // App Engine tasks
-apply plugin: 'com.google.cloud.tools.endpoints-framework-server'
 
 
 

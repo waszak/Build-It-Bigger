@@ -2,16 +2,16 @@ package com.udacity.gradle.builditbigger;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
-import com.example.myapplication.backend.myApi.MyApi;
+import com.udacity.gradle.builditbigger.Tools.BackendAsyncTask;
 
 
 public class MainActivity extends AppCompatActivity {
-    MyApi x;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void tellJoke(View view) {
-        Toast.makeText(this, "derp", Toast.LENGTH_SHORT).show();
-    }
 
+    public void tellJoke(View view) {
+        new BackendAsyncTask(this).execute();
+    }
 
 }

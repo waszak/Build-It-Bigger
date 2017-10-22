@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 
+import com.example.android.librarydisplayjoke.JokeDisplayActivity;
 import com.example.myapplication.backend.myApi.MyApi;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
@@ -41,14 +42,14 @@ public class BackendAsyncTask extends AsyncTask<String, Void, String> {
 
     @Override
     protected void onPostExecute(String result) {
-       /* Intent intent = new Intent(mContext, JokeDisplayActivity.class);
+        Intent intent = new Intent(mContext, JokeDisplayActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         intent.putExtra(JokeDisplayActivity.INTENT_JOKE, result);
         if(mContext instanceof Activity) {
             ((Activity) mContext).startActivityForResult(intent, 1, null);
         }else{
             mContext.startActivity(intent);
-        }*/
+        }
 
     }
 }

@@ -7,9 +7,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.myapplication.backend.myApi.MyApi;
+
 
 public class MainActivity extends AppCompatActivity {
-
+    MyApi x;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
